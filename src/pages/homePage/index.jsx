@@ -8,6 +8,12 @@ import Socials from "../../components/Socials"
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import ServiceOption from "../../components/serviceOption"
+import AboutBackGround from "../../components/AboutBackground"
+import GetApp from "../../components/GetApp"
+import GetDriverApp from "../../components/GetDriverApp"
+import WhyChooseUs from "../../components/WhyChooseus"
+import BlogContent from "../../components/blogContent"
+import FaqView from "../../components/faqView"
 
 
 const HomePage = () => {
@@ -52,15 +58,23 @@ console.log(countryInfo.countryCurrency)
 
   return (
     <>
-      <div className=" bg-gradient-to-t from-black to-transparent">
-        <Socials/>
+      
+      <div className="bg-gradient-to-t from-black to-transparent ">
         <Navbar/>
-        <Hero/>
+        {/*<AboutBackGround/>*/}
+        <Hero/> 
       </div>
         <ServiceOption/>
-        <Features/>
+        <GetApp/>
+        {/* <Features/> */}
+        <WhyChooseUs/>
+        
         <Earn currency = {countryInfo.countryCurrency} country = {countryInfo.countryName}/>
+        <GetDriverApp/>
+        {/* <GetApp/> */}
         <EarnDelivery currency = {countryInfo.countryCurrency} country = {countryInfo.countryName}/>
+        <BlogContent/>
+        {/* <FaqView/> */}
        
         <Footer/>
       

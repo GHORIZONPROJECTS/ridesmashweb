@@ -23,7 +23,8 @@ export default {
         "secondary" : "#01FFFF",
         "tertiary" : "#151513",
         "regular" : "#707070"
-      }
+      },
+  
     },
   },
   plugins: [],

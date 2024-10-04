@@ -2,15 +2,18 @@ import { useState } from 'react';
 import logo from '../../src/assets/logo.png'
 import { BiSupport, BiTaxi } from "react-icons/bi";
 import {FaXmark, FaBars} from 'react-icons/fa6'
-import { Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
+
 
 const Navbar = () => {
 
   const navItems = [
     {link : "Home", path : "/"},
+    {link : "Services", path : "services"},
+    {link : "Drive & Earn", path : "driveAndEarn"},
     {link : "About Us", path : "about"},
-    {link : "Our services", path : "services"},
     {link : "Contact Us", path : "contact"},
+   
   ]
 
 
@@ -35,7 +38,7 @@ const Navbar = () => {
                 {
                     navItems.map(({link, path}) => 
                     
-                    <a key={link} href={path} className='block text-xl'>{link}</a>
+                    <a key={link} href={path} className='block text-lg'>{link}</a>
 
                     )
                 }  
@@ -67,10 +70,25 @@ const Navbar = () => {
           </div>
           
         </nav>
-        <div className={`space-y-4 px-4 pt-0  pb-5 bg-[#020066] ${isMenuOpened ? "block top-90 right-0 left-0 " : "hidden"}`}>
+        <div className={`space-y-4 px-4 pt-0  pb-5 bg-[#020066] flex flex-col gap-1 h-[500px] ${isMenuOpened ? "block top-90 right-0 left-0 " : "hidden"}`}>
           {
-            navItems.map(({link, path}) => <a key={link} href={path} className='block hover:text-gray-200 text-white py-2 text-2xl font-extralight'>{link}</a>)
+            navItems.map(({link, path}) => <a key={link} href={path} className='block hover:text-gray-200 text-white py-1 text-2xl font-extralight'>{link}</a>)
           }
+          <div className='flex flex-col gap-3 mb-6'>
+            
+              <div className='flex items-center gap-3 '>
+                <BiTaxi className='font-bold text-2xl text-white gap-2'/>
+                <a href='/booking' className=' text-2xl text-white'>Book a Ride</a>
+              </div>
+              <div className='flex items-center gap-2'>
+                 <BiSupport className='font-bold text-2xl text-white gap-2'/>
+                 <a href='/support' className='text-2xl text-white'>Support</a>
+              </div>
+              
+              <a href='login' className='bg-secondary my-6 py-2 px-4 rounded hover:text-white hover:bg-primary text-xl text-center'>Login</a>
+              
+             
+            </div>
         </div>
 
     </>
