@@ -8,14 +8,13 @@ import { getAuth } from "firebase/auth";
 
 export const firebaseApp = initializeApp({
     // enter your firebase project details
-    apiKey: "AIzaSyBwB7b2QZMcASVAVkCs5K8FRD2zIJvP6KY",
-    authDomain: "ridesmash-924b9.firebaseapp.com",
-    databaseURL: "https://ridesmash-924b9-default-rtdb.firebaseio.com",
-    projectId: "ridesmash-924b9",
-    storageBucket: "ridesmash-924b9.appspot.com",
-    messagingSenderId: "1027238332681",
-    appId: "1:1027238332681:web:a19e181ba90dda13842bd8",
-    measurementId: "G-9H4XS8GQTV"
+    apiKey: "AIzaSyAAqFHkCyeC2sKMMMBLFQYvw2u0vBJIEZs",
+    authDomain: "ridesmash.com",
+    projectId: "smashride-ee7a7",
+    storageBucket: "smashride-ee7a7.appspot.com",
+    messagingSenderId: "425620499927",
+    appId: "1:425620499927:web:3a5c333265b54b38f12f92",
+    measurementId: "G-4GL1H1TDQF"
 
   
   
